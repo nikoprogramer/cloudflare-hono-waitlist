@@ -1,11 +1,30 @@
 ---
-import HelloWorld from "../components/HelloWorld.astro";
+import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
+import { Signup } from "../components/Signup.tsx";
+import Card from "../components/Card.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-  <HelloWorld />
+  <Hero />
+  <div class="flex justify-center p-4">
+    <Signup />
+  </div>
+  <div class="justify-center space-y-6 p-4 md:flex md:gap-4 md:space-y-0">
+    <Card
+      title="Po co?"
+      description="Po pierwsze, chcę dobrze poznac WebDev - od frontendu po backend. Po drugie, kto nie chciałby mieć własnego kącika internetu tylko dla siebie? :)"
+    />
+    <Card
+      title="Jak to działa?"
+      description="Ta aplikacja opiera się na stacku Astro + React + Tailwind, oraz Hono + Cloudflare Worker + SQLite"
+    />
+    <Card
+      title="Kim jestem?"
+      description="Jestem studentem teleinformatyki. Pasjonuje się również bardzo dużą ilością rzeczy. Poznasz mnie lepiej przez tego bloga!"
+    />
+  </div>
 </Layout>
