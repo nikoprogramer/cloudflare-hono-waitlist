@@ -1,0 +1,27 @@
+{
+  "name": "cloudflare-hono-waitlist",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "bun run --bun astro dev",
+    "build": "bun run --bun astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.0",
+    "astro": "^6.3.3",
+    "prettier": "^3.8.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "tailwindcss": "^4.3.0"
+  },
+  "devDependencies": {
+    "daisyui": "^5.5.19",
+    "prettier-plugin-tailwindcss": "^0.8.0"
+  }
+}
