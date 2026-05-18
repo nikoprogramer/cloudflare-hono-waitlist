@@ -2,4 +2,38 @@
   "name": "cloudflare-hono-waitlist",
   "main": "src/server/index.ts",
   "compatibility_date": "2026-05-16",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "blog_local_db",
+      "database_id": "123",
+      "migrations_dir": "./src/server/db/migrations"
+    }
+  ],
+  "env": {
+    "staging": {
+      "vars": {
+        "ENVIRONMENT": "staging",
+        "CF_ACCESS_DOMAIN": "https://niko1002255.cloudflareaccess.com",
+        "POLICY_AUD": "9eae0376918d0be5c70b855d2edc96bf99790997161ab0f546050f027346ccb7"
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "blog_staging_db",
+          "database_id": "eca1b75f-9fa7-4dac-adc6-f77eff742453",
+          "migrations_dir": "./src/server/db/migrations"
+        }
+      ]
+    },
+    "production": {
+      "vars": {
+        "ENVIRONMENT": "production"
+      }
+    }
+  }
 }
