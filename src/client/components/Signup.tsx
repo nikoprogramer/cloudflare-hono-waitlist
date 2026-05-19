@@ -1,6 +1,9 @@
 import { Mail } from "lucide-react";
+import { useState } from "react";
 
 export const Signup = () => {
+  const [email, setEmail] = useState("");
+
   return (
     <div className="join">
       <div>
